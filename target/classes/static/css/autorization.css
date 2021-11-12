@@ -1,0 +1,46 @@
+form{
+    text-decoration: none;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+
+}
+
+.form-block{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+
+.label-title{
+    float: none;
+    text-align: center;
+    width: 100%;
+    padding: 2px;
+    display: block;
+}
+
+.line-input{
+    font-size: 18px;
+    width: 100%;
+    transition: 700ms;
+    text-align: center;
+
+}
+
+.line-input:hover{
+    letter-spacing: 2px;
+}
+.line-input:active{
+    letter-spacing: 2px;
+}
+
+
+.line-input{
+    border: #0f0f0f;
+    border-radius: 10px;
+}

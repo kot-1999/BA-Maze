@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/autorization.css" />
+</head>
+<body>
+  <div id="page">
+    <h1>Comments</h1>
+      <span  th:if="${@userController.logged}">
+        <p class="player">Logged as: </p>
+        <p class="player" th:text="${@userController.getPlayer.getName}"></p>
+      </span>
+
+
+<!--      <div class="comment">-->
+<!--          <img class="comment-image" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"/>-->
+<!--          <h3 class="comment-text">Player</h3>-->
+<!--          <p class="comment-text intro">as asd sad PTas asd sad PTas asd sa</p>-->
+<!--          <p class="comment-text comment-date">{{created}}</p>-->
+<!--      </div>-->
+      <span th:utext="${comments}"/>
+
+
+    <h2>Leave a comment</h2>
+      <form action="comments/addComment">
+          <div class="form-block">
+              <label for="comment" class="label-title">Leave your comment here:</label>
+              <textarea id="comment" class="line-input" name="comment"></textarea>
+          </div>
+          <div class="form-block">
+              <input type="submit" class="button"/>
+          </div>
+      </form>
+      <a href="../" class="fixed">
+          <div class="button">Back</div>
+      </a>
+  </div>
+</body>
+</html>

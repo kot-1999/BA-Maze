@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Autorization</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/autorization.css" />
+</head>
+<body>
+<div id="page">
+  <h1>Autorization</h1>
+    <h2>Log in</h2>
+    <form action="/login" >
+        <div class="form-block">
+            <label for="lname" class="label-title">Name</label>
+            <input type="text" name="name" id="lname" class="line-input" placeholder="Frank" required/><br/>
+        </div>
+        <div class="form-block">
+            <label for="lpassword" class="label-title">Password</label>
+            <input type="password" name="password" id="lpassword" class="line-input" required/><br/>
+        </div>
+        <div class="form-block">
+            <input type="submit" class="button"/>
+        </div>
+
+    </form >
+    <h2>Sign up</h2>
+    <form action="/register">
+        <div class="form-block">
+            <label for="name" class="label-title" placeholder="Frank">Name</label>
+            <input type="text" name="name" id="name" class="line-input" required/><br/>
+        </div>
+        <div class="form-block">
+            <label for="password" class="label-title">Password</label>
+            <input type="password" name="password" id="password" class="line-input" required/><br/>
+        </div>
+        <div class="form-block">
+            <label for="email" class="label-title">Email * </label>
+            <input name="email" class="line-input required" type="email" placeholder="example@exmp.com" id="email" required maxlength="100" size="20">
+        </div>
+        <div class="form-block">
+            <label for="pictureUrl" class="label-title">Avatar picture url</label>
+            <input name="avatarUrl" class="line-input" type="url" id="pictureUrl" placeholder="https://example.com" pattern="https://.*" maxlength="200" size="20">
+        </div>
+        <div class="form-block">
+            <input type="submit" class="button"/>
+        </div>
+    </form>
+    <a href="javascript:history.back()" class="fixed">
+        <div class="button">Back</div>
+    </a>
+
+    <form>
+
+<!--        <div class="form-block">-->
+<!--            <label for="name" class="label-title">Name *</label>-->
+<!--            <input  class="line-input required" type="text" id="name"  placeholder="Frank"  required minlength="3" maxlength="20" size="20">-->
+<!--        </div>-->
+<!--        <div class="form-block">-->
+<!--            <label for="password" class="label-title">Password</label>-->
+<!--            <input class="line-input" type="password" id="password" placeholder="https://example.com"  maxlength="200" size="20" required>-->
+<!--        </div>-->
+
+<!--        <div class="form-block">-->
+<!--            <label for="email" class="label-title">Email * </label>-->
+<!--            <input class="line-input required" type="email" placeholder="example@exmp.com" id="email" required maxlength="100" size="20">-->
+<!--        </div>-->
+
+<!--        <div class="form-block">-->
+<!--            <label for="pictureUrl" class="label-title">Avatar picture url</label>-->
+<!--            <input class="line-input" type="url" id="pictureUrl" placeholder="https://example.com" pattern="https://.*" maxlength="200" size="20">-->
+<!--        </div>-->
+<!--        <div class="form-block">-->
+<!--            <input class="button" type="submit" />-->
+<!--        </div>-->
+    </form>
+
+
+
+</div>
+</body>
+</html>

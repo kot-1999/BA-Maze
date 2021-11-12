@@ -1,0 +1,225 @@
+#page{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 200px;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 40px 10px #ffffff;
+    border-radius: 30px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+li,h1,h2,h3,p,table,span{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+body{
+    font-family: Arial;
+    font-size: 20px;
+    background-color: black;
+}
+
+.nav{
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: auto;
+}
+.nav-link{
+    text-decoration: none;
+
+}
+
+.nav-btn{
+    border-radius: 40px;
+    border-top-right-radius: 5px;
+    float: left;
+    margin: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: aliceblue;
+    color: black;
+    transition:  400ms ;
+    animation-duration: 0.5s;
+
+}
+
+.nav-btn:hover{
+    background: black;
+    color: aliceblue;
+    padding-bottom: 10px;
+    position: relative;
+    animation-name: btn-animation;
+    animation-timing-function: ease;
+
+
+}
+
+#info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-text{
+    margin: 20px;
+    float: left;
+    font-size: 30px;
+    letter-spacing: 0.12em;
+}
+
+.text{
+    margin: 20px;
+    display: inline;
+    font-size: 30px;
+    letter-spacing: 0.12em;
+}
+
+@keyframes btn-animation {
+    0%  {bottom:0px; }
+    25% {bottom:3px;}
+    50% {bottom:-3px;}
+    75% {bottom:3px;}
+    100% {bottom:0px;}
+}
+
+.list{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 40%;
+}
+
+.comment{
+    overflow: auto;
+    position: relative;
+    width: 80%;
+    margin: 40px auto;
+    background-color: ghostwhite;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 40px rgba(0,0,0,0.10);
+}
+
+.comment-image{
+    max-height: 200px;
+    width: 150px;
+    float: left;
+    margin-right: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 10px 10px 40px rgba(0,0,0,0.30);
+
+}
+
+.intro:first-letter{
+    font-size: 200%;
+}
+
+textarea{
+    height: 60px;
+}
+
+.comment-text{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+
+.comment-date{
+    font-size: 14px;
+    font-style: italic;
+    float: right;
+}
+
+
+.button{
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    float: right;
+    text-decoration: none;
+    color: #0f0f0f;
+    background-color: aliceblue;
+    border: none;
+    transition: 500ms;
+}
+
+.button:hover{
+    background-color: #0f0f0f;
+    color: aliceblue;
+    cursor: pointer;
+}
+.player{
+    line-height: 5px;
+
+}
+
+.fixed{
+    position: fixed !important;
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+
+}
+img{
+    width: 100%;
+}
+
+.game-block{
+    width: 25%;
+    padding: 10px;
+    margin: 20px;
+    float: left;
+    border: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    transition: 300ms;
+}
+.game-block:hover{
+    box-shadow: 0px 0px 40px 10px rgba(0,0,0,0.30);
+}
+
+
+
+.game-list{
+    overflow: auto;
+    position: relative;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+}
+
+.rating{
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.rating:hover{
+    color: red;
+    background-color: black;
+}
+
+.checked{
+    color: red;
+}
+
+.game-title{
+
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maze</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <div id="page">
+        <h1>Hello friend</h1>
+
+        <span  th:if="${@userController.logged}">
+            <p class="player">Logged as: </p>
+            <p class="player" th:text="${@userController.getPlayer.getName}"></p>
+        </span>
+
+
+        <nav class="nav">
+
+
+            <a href="/logout" class="nav-link" th:if="${@userController.logged}"><div class="nav-btn">
+                Log out
+            </div></a>
+
+            <a href="/autorization" class="nav-link" th:if="not${@userController.logged}"><div class="nav-btn">
+                Log in
+            </div></a>
+
+
+        </nav>
+
+        <div class="game-list">
+            <a href="/maze" style="text-decoration: none;">
+                <div class="game-block">
+                    <img src="/img.maze/maze01.jpg" />
+
+                    <p class="game-title">Maze</p>
+                    </hr/>
+                    <div th:utext="${@mazeController.getRate}"></div>
+                </div>
+            </a>
+            <a href="/maze/backtracking"  style="text-decoration: none;">
+                <div class="game-block">
+                    <img src="/img.maze/maze02.jpg" />
+                    <p  class="game-title">Backtracking maze</p>
+                    <hr/>
+                    <div th:utext="${@mazeController.getRate}"></div>
+                </div>
+            </a>
+
+            <a href="/maze/huntAndKill"  style="text-decoration: none;">
+                <div class="game-block">
+                    <img src="/img.maze/maze03.jpg" />
+                    <p  class="game-title">Hunt and kill maze</p>
+                    <hr/>
+                    <div th:utext="${@mazeController.getRate}"></div>
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+</body>
+</html>

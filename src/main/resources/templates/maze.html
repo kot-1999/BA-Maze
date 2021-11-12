@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maze</title>
+    <link rel="stylesheet" href="/css/maze.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <div id="page">
+        <h1>You are in maze</h1>
+        <span  th:if="${@userController.logged}">
+            <p class="player">Logged as: </p>
+            <p class="player" th:text="${@userController.getPlayer.getName}"></p>
+        </span>
+        <nav class=" nav">
+
+            <a href="maze/restart" class="nav-link"><div class="nav-btn">
+                Restart
+            </div></a>
+
+            <a href="maze/topPlayers" class="nav-link"><div class="nav-btn">
+                Top Players
+            </div></a>
+
+            <a href="maze/comments" class="nav-link"><div class="nav-btn">
+                Comments
+            </div></a>
+
+            <a href="/logout" class="nav-link" th:if="${@userController.logged}"><div class="nav-btn">
+                Log out
+            </div></a>
+
+            <a href="/autorization" class="nav-link" th:if="not${@userController.logged}"><div class="nav-btn">
+                Log in
+            </div></a>
+        </nav>
+        <h2>Choose maze creating algorythm</h2>
+        <nav class=" nav">
+            <a href="maze/backtracking" class="nav-link"><div class="nav-btn">
+                Backtracking
+            </div></a>
+
+            <a href="maze/huntAndKill" class="nav-link"><div class="nav-btn">
+                Hunt & Kill
+            </div></a>
+
+        </nav>
+
+        <div id="info">
+            <p class="info-text" th:text="${level}"/>
+            <p class="info-text" th:text="${score}"/>
+            <p class="info-text" th:text="${highestScore}"/>
+
+        </div>
+        <form  id="key-form" hidden>
+            <input id="key"  class="line-input" name="key">
+<!--            <input type="submit" class="button"/>-->
+        </form>
+        <span th:utext="${htmlField}"></span>
+
+
+        <a href="/" class="fixed">
+            <div class="button">Back</div>
+        </a>
+
+
+
+    </div>
+    <script  type="module" src="/js/script.js"></script>
+
+
+</body>
+</html>

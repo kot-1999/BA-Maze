@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Players</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<div id="page">
+    <h1>Top players</h1>
+    <span  th:if="${@userController.logged}">
+            <p class="player">Logged as: </p>
+            <p class="player" th:text="${@userController.getPlayer.getName}"></p>
+        </span>
+    <ol class="list">
+        <li th:each="score : ${topPlayers}">
+            <p class="text" th:text="${score.name}"></p>
+            <p class="text" th:text="${score.score}"></p>
+
+            <hr/>
+        </li>
+    </ol>
+    <a href="javascript:history.back()" class="fixed">
+        <div class="button">Back</div>
+    </a>
+
+</div>
+</body>
+</html>
